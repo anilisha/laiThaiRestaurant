@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<title> Lai Thai </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body>
+	
+	<!-- navigation bar -->
+	
+	<nav class="my-navbar navbar">
+	
+		<div class = "container">
+
+			<div class = "navbar-header">
+				<a class="navbar-brand" href="index.html"> LAI THAI </a>
+			</div>
+			
+			<ul class="nav navbar-nav">
+			<li class="dropdown"> <a class = "dropdown-toggle" data-toggle="dropdown" href="#"> Menu <span class = "caret"> </span> </a>
+				<ul class="dropdown-menu">
+					<li> <a href="appetizer.html"> Appetizer </a> </li>
+					<li> <a href="menu.html"> Menu </a> </li>
+				</ul>
+			</li>
+			<li> <a href="aboutus.html"> About us </a></li>
+			<li> <a href="contactus.html"> Contact us </a></li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li> <a href="https://postmates.com/merchant/lai-thai-bethany">  <span class="glyphicon glyphicon-shopping-cart"> Order Now </span> </a>
+				</li>
+			</ul>
+		
+		</div>
+	
+	
+	</nav>
+	
+	<!-- end navigation bar -->
+	<br>
+	<!-- slide show -->
+	<div class="slideshow-container">
+
+	<div class="mySlides fade">
+	  <img src="images/slide1.jpg" style="width:80%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="images/slide2.jpg" style="width:80%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="images/slide3.jpg" style="width:80%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="images/slide4.jpg" style="width:80%">
+	</div>
+	
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span> 
+	  <span class="dot" onclick="currentSlide(4)"></span> 
+	</div>
+
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+	<br>
+	<!-- end slideshow  -->
+	
+	<!-- google map -->
+	<div id = "infoContainer">
+	
+		<div id ="leftColumn">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.438855305827!2d-97.64617698448093!3d35.49342524785585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b20f860108a3eb%3A0x33b9166c4130fc5f!2s7419+NW+23rd+St%2C+Bethany%2C+OK+73008!5e0!3m2!1sen!2sus!4v1532576240361"
+					width="620" height="420" frameborder="0" style="border:0"></iframe>
+		</div>
+		
+		<div id="rightColumn"> 
+			<h3> Lai Thai </h3>
+			Lunch Hour:<br>  
+			Monday - Friday 11:00 AM - 2:00 PM <br>
+			Saturday 11:30 AM - 3:00 PM <br>
+			<br>
+			Dinner hour: <br>
+			Monday - Friday 5:00 PM-8:30 PM<br>
+			Saturday 5:00 PM-9:00 PM <br>
+			
+			Sunday Closed <br>
+			<br>
+			<span class="glyphicon glyphicon-earphone"></span> 405-875-1688 <br>
+			<span class="glyphicon glyphicon-earphone"></span> 405-875-1688 <br>
+			<br>
+			Follow us on our social media: <br>
+			<a href="https://www.facebook.com/eatlaithai/" class="fa fa-facebook"></a>
+			<a href="https://www.yelp.com/biz/lai-thai-bethany" class="fa fa-yelp" style="font-size:35px;color:red"></a>		
+		</div>
+		
+	</div>
+		
+	
+	<!-- end google map -->
+	
+	
+	</body>
+	<div class="footer">
+		<p>&copy Copyright 2018. All rights reserved.</p>
+	</div>
+					   
+	
+</html>

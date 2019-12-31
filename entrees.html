@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Lai Thai </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="main.css">
+		<script type="text/javascript" src="jquery.js"> </script>
+		<style type="text/css"> </style>
+		
+		<script>
+		
+		</script>
+	</head>
+	
+	<body class="home">
+	
+	<!-- navigation bar -->
+		<div class="navbar">
+			<ul>
+				<li> <a style="float:left; font-family:Impact, Charcoal, sans-serif; font-size:35px" href="index.html">Lai Thai</a> </li>
+				<li><a href="menu.html" class:"menu"> Menu </a>
+				  <ul class="dropdown">
+					<li><a href="#" class="appetizer"> Appetizers </a></li>
+					<li><a href="#"> Soups </a></li>
+					<li><a href="#"> Salads </a></li>
+					<li><a href="#"> Entrees</a></li>
+					<li><a href="#"> Thai Curries </a></li>
+					<li><a href="#"> Seafood </a></li>
+				  </ul>
+				</li>
+				<li><a href="#about" class="about"> About </a> </li>  
+				<li><a href="#contactus" class="contactus"> Contact us </a> </li>
+				<li><a href="#signup"> SIGN UP </a></li>
+				<li> <a style="float:right" href="#about">CAll US</a> </li>
+			</ul>
+
+		</div>
+	<!-- end navigation bar -->
+	
+	<div class = "header">
+		<p id ="price"> Total Price = 0 </p>
+		<p id ="select"> Selected Item = 0 </p>
+	</div>
+	
+	<!-- entree  -->
+		<div class="sidenav">
+			<a href="menu.html"> Appetizers </a>
+			<a href="#"> Soups </a>
+			<a href="#"> Salads </a>
+			<a href= "entrees.html"> Entrees</a>
+			<a href="#"> Thai Curries </a>
+			<a href="#"> Seafood </a>
+		</div>
+
+		<div class="entreeMain">
+			<h2>Entrees</h2> 
+			
+			<p> <i>Served with steamed rice <br>
+			with fried rice, addition <b>$2.50</b><br>
+			with Shrimp, <b> $9.75 </b></i> </p>
+			<hr>
+			<br>
+			
+			<p id="desc"> <b> Crab Rolls (5)  </b> </p>
+			<p class="prices" data_value="4.25"> <b> 4.25</b> </p>
+			<button onclick="adcart();"> add to cart </button>
+		
+			
+			<p> <b> Crab Rolls (5)  $4.25</b> <br>
+			Cream cheese, immitation crab meat, and onions. Served wuth sweet & sour sauce. </p>
+			
+			<p> <b> Fried wontons(6) $4.25</b> <br>
+			Stuffed with ground pork and onions. Served with our house sauce.</p>
+			
+			<p> <b> Crab Rolls (5)  $4.25</b> <br>
+			Cream cheese, immitation crab meat, and onions. Served wuth sweet & sour sauce. </p>
+			
+			<p> <b> Fried Spring Rolls(4)  $4.75</b> <br>
+			Ground chicken, mixed vegetables, and clear noodles rolled in spring roll shell. Served with our house sauce. </p>
+			
+			<p> <b> Fresh Spring Rolls (2)</b> <br>
+			Shrimp <b> $3.99 </b> Mixed veggies or fried Tofu <b>2.99 </b> <br>rolled in steamed rice paper & served with peanut sauce & cucumber salad. </p>
+			
+			<p> <b> Chicken Satay (4 skewers) $5.99</b> <br>
+			Grilled marinated chicken on skewers.Served with peanut suace & cucumber salad.</p>
+			
+			<p> <b>Deep Fried Beef Jerkey</b> <br>
+			1/2 lb <b> $5 </b> 1 lb  <b> $10</b> with sticky rice additional <b> $3.50 </b> </p>
+			
+			<p> <b> Hot Wings or Golden Wings(6) $5.75</b> <br>
+			Deep fried chicken wings topped with our Thai hot & spicy sauce.</p>
+			
+			<p> <b>Tempura Plate $6.50 </b> <br>
+			Battered and deep fried shrimp and mixed m=vegetables. Served with our house sauce.
+			</p>
+		
+			
+			
+		</div>   
+	<!-- end entree		 -->
+	
+	<script type="text/javascript">
+	
+	var prices = $(".prices").attr("data_value");
+	var i = 0;
+
+	function adcart(){
+		i++;
+		document.getElementById("price").innerHTML = "Total price" + i * prices;
+		prices;
+	}	
+	
+	</script>
+	
+	
+	
+	</body>
+	
+	<div class="footer">
+		<p>&copy Copyright voidbits 2018. All rights reserved.</p>
+	</div>
+</html>
